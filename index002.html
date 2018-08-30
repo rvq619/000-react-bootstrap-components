@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel"> 
+        // Navbar Component
+        class Navbar extends React.Component {
+            render() {
+                return(                
+                        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item active">
+                                <a class="nav-link" href="#">Home
+                                <span class="sr-only">(current)</span>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                                </li>
+                            </ul>
+                            </div>
+                        </nav>                    
+                )
+            }
+        }
+
+        // Jumbotron Component
+        class Jumbotron extends React.Component {
+            render() {
+                return(
+                    <div class="jumbotron">
+                        <div class="container">
+                            <h1 class="display-3">Hello, world!</h1>
+                            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                            <p>
+                                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+                            </p>
+                        </div>
+                    </div>
+                )
+            }
+        }
+
+        // Homepage Component
+        class Homepage extends React.Component {
+            render() {
+                return(
+                    <div class="container">
+                        <p>Main Content Here.</p>
+                    </div>
+                )
+            }
+        }
+        
+        // Footer Component
+        class Footer extends React.Component {
+            render() {
+                return(
+                    <footer class="container">
+                        <p>&copy; Ryans Site; 2017-2018</p>
+                    </footer>
+                )
+            }
+        }
+        
+        // Main Component
+        class App extends React.Component {
+            render() {
+                return(
+                    <div>
+                        <Navbar />
+                        <Jumbotron />
+                        <Homepage />
+                        <Footer />
+                    </div>
+                )
+            }
+        }
+
+        ReactDOM.render(<App />, document.getElementById('app'));
+
+    </script>
+</body>
+
+</html>
