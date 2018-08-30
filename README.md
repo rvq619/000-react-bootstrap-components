@@ -8,6 +8,7 @@ Technologies used:
 - Bootstrap 4
 - Babel 6
 
+Files uploaded description:
 - index001 - bootstrap template
 - index002 - created the React components
 - index003 - added props and propTypes to the components
